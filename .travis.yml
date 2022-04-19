@@ -3,7 +3,7 @@ services:
   - docker
 
 before-install:
-  - docker built -t danielzamignani/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t danielzamignani/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true danielzamignani/react-test npm test
